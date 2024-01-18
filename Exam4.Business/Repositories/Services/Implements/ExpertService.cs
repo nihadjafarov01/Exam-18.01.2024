@@ -17,45 +17,35 @@ namespace Exam4.Business.Repositories.Services.Implements
             _mapper = mapper;
         }
 
-        public void Create()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Create(ExpertCreateVM vm)
-        {
-            var model = _mapper.Map<Expert>(vm);
-             _repo.CreateAsync(model);
-        }
-
-        public async Task DeleteAsync(int id)
-        {
-             await _repo.DeleteAsync(id);
-        }
-
         public async Task<IEnumerable<ExpertListItemVM>> GetAllSync()
         {
-            var data = await _repo.GetAllSync();
+            var data = await _repo.GetAllAsync();
             var rdata = _mapper.Map<IEnumerable<ExpertListItemVM>>(data);
             return rdata;
         }
 
-
-        public Task SaveAsync()
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            await _repo.DeleteAsync(id);
         }
 
         public async Task UpdateAsync(int id, ExpertUpdateVM vm)
         {
-            Expert model = _mapper.Map<Expert>(vm);
-            await _repo.UpdateAsync(id, model);
+            var model = await _repo.GetByIdAsync(id);
+            var rmodel = _mapper.Map(vm,model);
+            await _repo.UpdateAsync(rmodel);
         }
 
         public async Task<ExpertUpdateVM> UpdateAsync(int id)
         {
-            var data = await _repo.GetByIdAsync(id);
-            return _mapper.Map<ExpertUpdateVM>(data);
+            var model = await _repo.UpdateAsync(id);
+            return _mapper.Map<ExpertUpdateVM>(model);
+        }
+
+        public async Task CreateAsync(ExpertCreateVM vm)
+        {
+            var model = _mapper.Map<Expert>(vm);
+            await _repo.CreateAsync(model);
         }
     }
 }

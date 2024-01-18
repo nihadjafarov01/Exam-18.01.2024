@@ -2,6 +2,8 @@
     ViewData["Title"] = "Home Page";
 }
 
+@model IEnumerable<ExpertListItemVM>
+
         <div class="banner_main">
           <h1 class="banner_taital">financial <br>Service</h1>
           <p class="banner_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </p>
@@ -161,54 +163,21 @@
         <p class="what_text_1">It is a long established fact that a reader will be distracted by the readable content of a </p>
         <div class="team_section_2 layout_padding">
           <div class="row">
-            <div class="col-sm-3">
-              <img src="~/images/img-7.png" class="image_7">
-              <p class="readable_text">Readable</p>
-              <p class="readable_text_1">Follow Us</p>
-              <div class="social_icon">
-                <ul>
-                  <li><a href="#"><img src="~/images/fb-icon.png"></a></li>
-                  <li><a href="#"><img src="~/images/twitter-icon.png"></a></li>
-                  <li><a href="#"><img src="~/images/linkedin-icon.png"></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <img src="~/images/img-8.png" class="image_7">
-              <p class="readable_text">Content</p>
-              <p class="readable_text_1">Follow Us</p>
-              <div class="social_icon">
-                <ul>
-                  <li><a href="#"><img src="~/images/fb-icon.png"></a></li>
-                  <li><a href="#"><img src="~/images/twitter-icon.png"></a></li>
-                  <li><a href="#"><img src="~/images/linkedin-icon.png"></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <img src="~/images/img-9.png" class="image_7">
-              <p class="readable_text">Readable</p>
-              <p class="readable_text_1">Follow Us</p>
-              <div class="social_icon">
-                <ul>
-                  <li><a href="#"><img src="~/images/fb-icon.png"></a></li>
-                  <li><a href="#"><img src="~/images/twitter-icon.png"></a></li>
-                  <li><a href="#"><img src="~/images/linkedin-icon.png"></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <img src="~/images/img-10.png" class="image_7">
-              <p class="readable_text">Content</p>
-              <p class="readable_text_1">Follow Us</p>
-              <div class="social_icon">
-                <ul>
-                  <li><a href="#"><img src="~/images/fb-icon.png"></a></li>
-                  <li><a href="#"><img src="~/images/twitter-icon.png"></a></li>
-                  <li><a href="#"><img src="~/images/linkedin-icon.png"></a></li>
-                </ul>
-              </div>
-            </div>
+                @foreach(var item in Model)
+                {
+                <div class="col-sm-3">
+                  <img src="~/@item.ImageUrl" class="image_7">
+                  <p class="readable_text">@item.Fullname</p>
+                  <p class="readable_text_1">Follow Us</p>
+                  <div class="social_icon">
+                    <ul>
+                      <li><a href="#"><img src="~/images/fb-icon.png"></a></li>
+                      <li><a href="#"><img src="~/images/twitter-icon.png"></a></li>
+                      <li><a href="#"><img src="~/images/linkedin-icon.png"></a></li>
+                    </ul>
+                  </div>
+                </div>
+                }
           </div>
         </div>
       </div>

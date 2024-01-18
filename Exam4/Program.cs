@@ -41,7 +41,7 @@ namespace Exam4
                 opt.SlidingExpiration = true;
 
                 opt.Cookie.Name = "IdentityCookie";
-                opt.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+                opt.ExpireTimeSpan = TimeSpan.FromDays(1);
             });
 
             builder.Services.AddScoped<IExpertRepository, ExpertRepository>();
@@ -49,7 +49,10 @@ namespace Exam4
             builder.Services.AddScoped<IExpertService, ExpertService>();
             builder.Services.AddScoped<IAuthService, AuthService>();
 
-            builder.Services.AddAutoMapper(typeof(ExpertMappingProfile));
+            builder.Services.AddAutoMapper(opt =>
+            {
+                opt.AddProfile(new ExpertMappingProfile(builder.Environment));
+            });
 
             var app = builder.Build();
 
@@ -72,6 +75,7 @@ namespace Exam4
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+            Console.Out.WriteLine("salammmmm");
 
             app.Run();
         }

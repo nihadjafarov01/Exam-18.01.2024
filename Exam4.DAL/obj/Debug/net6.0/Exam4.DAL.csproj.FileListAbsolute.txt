@@ -15,3 +15,20 @@ C:\Users\Birinci Novbe\Desktop\Exam 18.01.2024\Exam4.DAL\obj\Debug\net6.0\refint
 C:\Users\Birinci Novbe\Desktop\Exam 18.01.2024\Exam4.DAL\obj\Debug\net6.0\Exam4.DAL.pdb
 C:\Users\Birinci Novbe\Desktop\Exam 18.01.2024\Exam4.DAL\obj\Debug\net6.0\Exam4.DAL.genruntimeconfig.cache
 C:\Users\Birinci Novbe\Desktop\Exam 18.01.2024\Exam4.DAL\obj\Debug\net6.0\ref\Exam4.DAL.dll
+C:\Users\nihad\Desktop\Exam-18.01.2024\Exam4.DAL\bin\Debug\net6.0\Exam4.DAL.deps.json
+C:\Users\nihad\Desktop\Exam-18.01.2024\Exam4.DAL\bin\Debug\net6.0\Exam4.DAL.runtimeconfig.json
+C:\Users\nihad\Desktop\Exam-18.01.2024\Exam4.DAL\bin\Debug\net6.0\Exam4.DAL.dll
+C:\Users\nihad\Desktop\Exam-18.01.2024\Exam4.DAL\bin\Debug\net6.0\Exam4.DAL.pdb
+C:\Users\nihad\Desktop\Exam-18.01.2024\Exam4.DAL\bin\Debug\net6.0\Exam4.Core.dll
+C:\Users\nihad\Desktop\Exam-18.01.2024\Exam4.DAL\bin\Debug\net6.0\Exam4.Core.pdb
+C:\Users\nihad\Desktop\Exam-18.01.2024\Exam4.DAL\obj\Debug\net6.0\Exam4.DAL.csproj.AssemblyReference.cache
+C:\Users\nihad\Desktop\Exam-18.01.2024\Exam4.DAL\obj\Debug\net6.0\Exam4.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nihad\Desktop\Exam-18.01.2024\Exam4.DAL\obj\Debug\net6.0\Exam4.DAL.AssemblyInfoInputs.cache
+C:\Users\nihad\Desktop\Exam-18.01.2024\Exam4.DAL\obj\Debug\net6.0\Exam4.DAL.AssemblyInfo.cs
+C:\Users\nihad\Desktop\Exam-18.01.2024\Exam4.DAL\obj\Debug\net6.0\Exam4.DAL.csproj.CoreCompileInputs.cache
+C:\Users\nihad\Desktop\Exam-18.01.2024\Exam4.DAL\obj\Debug\net6.0\Exam4.DAL.csproj.CopyComplete
+C:\Users\nihad\Desktop\Exam-18.01.2024\Exam4.DAL\obj\Debug\net6.0\Exam4.DAL.dll
+C:\Users\nihad\Desktop\Exam-18.01.2024\Exam4.DAL\obj\Debug\net6.0\refint\Exam4.DAL.dll
+C:\Users\nihad\Desktop\Exam-18.01.2024\Exam4.DAL\obj\Debug\net6.0\Exam4.DAL.pdb
+C:\Users\nihad\Desktop\Exam-18.01.2024\Exam4.DAL\obj\Debug\net6.0\Exam4.DAL.genruntimeconfig.cache
+C:\Users\nihad\Desktop\Exam-18.01.2024\Exam4.DAL\obj\Debug\net6.0\ref\Exam4.DAL.dll

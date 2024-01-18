@@ -15,15 +15,27 @@ namespace Exam4.Business.Repositories.Implements
             _context = context;
         }
         DbSet<T> Table => _context.Set<T>();
+
+        public async Task<IEnumerable<T>> GetAllAsync()
+        {
+            return await Table.ToListAsync();
+        }
+
         public async Task<T> GetByIdAsync(int id)
         {
-            
             return await Table.FindAsync(id);
         }
 
-        public async Task<IEnumerable<T>> GetAllSync()
+        public async Task UpdateAsync(T model)
         {
-            return await Table.ToListAsync();
+            Table.Update(model);
+            await SaveAsync();
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            Table.Remove(await Table.FindAsync(id));
+            await SaveAsync();
         }
 
         public async Task SaveAsync()
@@ -31,28 +43,15 @@ namespace Exam4.Business.Repositories.Implements
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(int id)
-        {
-            var model = await Table.FindAsync(id);
-            Table.Remove(model);
-            await SaveAsync();
-        }
-
-        public async Task UpdateAsync(int id, T model)
-        {
-            Table.Update(model);
-            await SaveAsync();
-        }
-
-        public void Create()
-        {
-            throw new NotImplementedException();
-        }
-
-        public async void CreateAsync(T model)
+        public async Task CreateAsync(T model)
         {
             await Table.AddAsync(model);
             await SaveAsync();
+        }
+
+        public async Task<T> UpdateAsync(int id)
+        {
+            return await GetByIdAsync(id);
         }
     }
 }

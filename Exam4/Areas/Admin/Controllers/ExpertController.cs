@@ -26,9 +26,9 @@ namespace Exam4.Areas.Admin.Controllers
              return View();
         }
         [HttpPost]
-        public  IActionResult Create(ExpertCreateVM vm)
+        public  async Task<IActionResult> Create(ExpertCreateVM vm)
         {
-            _service.Create(vm);
+            await _service.CreateAsync(vm);
             return RedirectToAction("Index");
         }
         [HttpPost]
