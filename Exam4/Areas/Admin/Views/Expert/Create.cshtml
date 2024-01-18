@@ -1,0 +1,17 @@
+﻿@model ExpertCreateVM
+
+<form method="post">
+    <div class="form-group">
+        <label>Fullname</label>
+        <input asp-for="Fullname" class="form-control">
+        <span asp-validation-for="Fullname" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>ImageUrl</label>
+        <input asp-for="ImageUrl" class="form-control">
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a asp-action="Index" type="button" class="btn btn-light">Cancel</a>
+
+</form>
